@@ -1,9 +1,9 @@
 public void setup() {
-  size(486, 486);
+  size(729, 729);
 }
 PShape s;
 public void draw() {
-  sierpinski(0, 0, 243);
+  sierpinski(0, 0, 729);
   noLoop();
 }
 public void mouseDragged() {
@@ -11,22 +11,20 @@ public void mouseDragged() {
 public void sierpinski(int x, int y, int len) {
   if (len <= 3) {
     fill(0);//(float)(Math.random()*255), (float)(Math.random()*255), (float)(Math.random()*255));
-    s = createShape();
-    s.beginShape();
-    s.vertex(x,y+(len/3));
-    s.vertex(x+(len/3),y+(len/3));
-    s.vertex(x+(len/3),y);
-    s.vertex(x+(2*len/3),y);
-    s.vertex(x+(2*len/3),y+(len/3));
-    s.vertex(x+len,y+(len/3));
-    s.vertex(x+len,y+(2*len/3));
-    s.vertex(x+(2*len/3),y+(2*len/3));
-    s.vertex(x+(2*len/3),y+len);
-    s.vertex(x+(len/3),y+len);
-    s.vertex(x+(len/3),y+(2*len/3));
-    s.vertex(x,y+(2*len/3));
-    s.endShape();
-    shape(s,x,y);
+    beginShape();
+    vertex(x,y+(len/3));
+    vertex(x+(len/3),y+(len/3));
+    vertex(x+(len/3),y);
+    vertex(x+(2*len/3),y);
+    vertex(x+(2*len/3),y+(len/3));
+    vertex(x+len,y+(len/3));
+    vertex(x+len,y+(2*len/3));
+    vertex(x+(2*len/3),y+(2*len/3));
+    vertex(x+(2*len/3),y+len);
+    vertex(x+(len/3),y+len);
+    vertex(x+(len/3),y+(2*len/3));
+    vertex(x,y+(2*len/3));
+    endShape(CLOSE);
   } else {
     sierpinski(x+(len/3), y, len/3);//12
     sierpinski(x, y+(len/3), len/3);//21
