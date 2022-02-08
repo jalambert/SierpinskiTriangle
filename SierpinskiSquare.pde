@@ -1,15 +1,33 @@
 public void setup() {
   size(729, 729);
+  background(200);
 }
 public void draw() {
+  fill(200);
+  rect(0,0,729,729);
+  fill(100);
   sierpinski(0, 0, 729);
-  noLoop();
 }
-public void mouseDragged() {
+int size = 6;
+public void keyPressed() {
+  if(key == '0')
+  size = 0;
+  if(key == '1')
+  size = 1;
+  if(key == '2')
+  size = 2;
+  if(key == '3')
+  size = 3;
+  if(key == '4')
+  size = 4;
+  if(key == '5')
+  size = 5;
+  if(key == '6')
+  size = 6;
 }
 public void sierpinski(int x, int y, int len) {
-  if (len <= 3) {
-    fill(0);//(float)(Math.random()*255), (float)(Math.random()*255), (float)(Math.random()*255));
+  if (len <= pow(3,6-size)) {
+    //(float)(Math.random()*255), (float)(Math.random()*255), (float)(Math.random()*255));
     rect(x, y, len, len);
   } else {
     sierpinski(x, y, len/3);//11
