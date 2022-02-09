@@ -1,12 +1,12 @@
 public void setup() {
   size(1024, 1026);
-  //background(200);
 }
 public void draw() {
+  background(200);
   fill(200);
   sierpinski(512, 0, 1024);
 }
-//int size = 9;
+int size = 9;
 public void keyPressed() {
   if(key == '0')
   size = 0;
