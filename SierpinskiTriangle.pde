@@ -7,7 +7,7 @@ public void draw() {
   sierpinski(512, 0, 1024);
 }
 int size = 9;
-public void keyPressed() {
+/*public void keyPressed() {
   if(key == '0')
   size = 0;
   if(key == '1')
@@ -28,7 +28,7 @@ public void keyPressed() {
   size = 8;
   if(key == '9')
   size = 9;
-}
+}*/
 public void sierpinski(int x, int y, int len) {
   if (len <= pow(2,9-size)) {
     triangle(x, y, x-len, y+len*2, x+len, y+len*2);
