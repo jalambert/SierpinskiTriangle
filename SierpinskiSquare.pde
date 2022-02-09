@@ -1,8 +1,8 @@
 public void setup() {
   size(729, 729);
-  background(200);
 }
 public void draw() {
+  background(200);
   fill(200);
   rect(0,0,729,729);
   fill(100);
