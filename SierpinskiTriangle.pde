@@ -1,36 +1,36 @@
 public void setup() {
   size(1024, 1026);
-  int size = 9;
+  int siz = 9;
 }
 public void draw() {
   //background(200);
   fill(200);
   sierpinski(512, 0, 1024);
 }
-/*public void keyPressed() {
+public void keyPressed() {
   if(key == '0')
-  size = 0;
+  siz = 0;
   if(key == '1')
-  size = 1;
+  siz = 1;
   if(key == '2')
-  size = 2;
+  siz = 2;
   if(key == '3')
-  size = 3;
+  siz = 3;
   if(key == '4')
-  size = 4;
+  siz = 4;
   if(key == '5')
-  size = 5;
+  siz = 5;
   if(key == '6')
-  size = 6;
+  siz = 6;
   if(key == '7')
-  size = 7;
+  siz = 7;
   if(key == '8')
-  size = 8;
+  siz = 8;
   if(key == '9')
-  size = 9;
-}*/
+  siz = 9;
+}
 public void sierpinski(int x, int y, int len) {
-  if (len <= pow(2,9-size)) {
+  if (len <= pow(2,9-siz)) {
     triangle(x, y, x-len, y+len*2, x+len, y+len*2);
   } else {
     sierpinski(x, y, len/2);
