@@ -3,7 +3,7 @@ public void setup() {
   int siz = 9;
 }
 public void draw() {
-  //background(200);
+  background(200);
   fill(200);
   sierpinski(512, 0, 1024);
 }
