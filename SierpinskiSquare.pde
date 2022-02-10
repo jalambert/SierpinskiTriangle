@@ -6,25 +6,25 @@ public void draw() {
   fill(100);
   sierpinski(0, 0, 729);
 }
-int size = 6;
+int siz = 6;
 public void keyPressed() {
   if(key == '0')
-  size = 0;
+  siz = 0;
   if(key == '1')
-  size = 1;
+  siz = 1;
   if(key == '2')
-  size = 2;
+  siz = 2;
   if(key == '3')
-  size = 3;
+  siz = 3;
   if(key == '4')
-  size = 4;
+  siz = 4;
   if(key == '5')
-  size = 5;
+  siz = 5;
   if(key == '6')
-  size = 6;
+  siz = 6;
 }
 public void sierpinski(int x, int y, int len) {
-  if (len <= pow(3,6-size)) {
+  if (len <= pow(3,6-siz)) {
     //(float)(Math.random()*255), (float)(Math.random()*255), (float)(Math.random()*255));
     rect(x, y, len, len);
   } else {
